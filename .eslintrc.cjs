@@ -9,14 +9,13 @@ module.exports = {
     'plugin:vue/vue3-strongly-recommended',
     'plugin:@typescript-eslint/recommended',
     '@vue/typescript/recommended',
+    'airbnb-base',
+    'airbnb-typescript/base',
   ],
+  parser: 'vue-eslint-parser',
   parserOptions: {
     parser: '@typescript-eslint/parser',
-    ecmaVersion: 'latest', // Specify the ECMAScript version
-    sourceType: 'module',
-    tsconfigRootDir: __dirname,
     project: ['./tsconfig.app.json'], // Path to the TypeScript configuration
-    extraFileExtensions: ['.vue'], // Additional file extensions
   },
   rules: {
     'max-len': 0,
@@ -45,5 +44,6 @@ module.exports = {
     }],
     'vue/multi-word-component-names': 0,
     'no-tabs': ['error', { allowIndentationTabs: true }],
+    '@typescript-eslint/no-explicit-any': 0,
   },
 };
